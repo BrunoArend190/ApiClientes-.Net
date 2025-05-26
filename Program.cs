@@ -27,9 +27,12 @@ namespace ApiClientes
             builder.Services.AddSwaggerGen();
             builder.Services.AddSingleton<ClientesContext>();
             builder.Services.AddScoped<ClientesService>();
+            builder.Services.AddScoped<EnderecosService>();
 
-            
+
+
             var app = builder.Build();
+        
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
